@@ -6,3 +6,7 @@ body {
 a {
   color: #00B7FF;
 }
+
+#items_list {
+  margin: 10px;
+}
