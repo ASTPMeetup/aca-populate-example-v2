@@ -8,5 +8,51 @@ a {
 }
 
 #items_list {
-  margin: 10px;
+  margin-left: 20px;
+}
+
+#tags_list {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.button {
+    background-color:  #3399ff; /* Green */
+    border: none;
+    color: white;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+input:focus {
+    border: 3px solid #CCFFCC;
+}
+
+textarea {
+  width: 95%;
+}
+
+form {
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.profile_info {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 500px;
+}
+
+#intro {
+  width: 70%;
+}
+
+#items_jumbotron {
+  margin: 20px;
+  display: inline-block;
 }

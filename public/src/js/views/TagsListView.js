@@ -5,7 +5,7 @@ var TagsCollection = require('../collections/tagsCollection');
 
 var TagListView = Backbone.View.extend({
 
-  el: '<div id="tag_list"></div>',
+  el: '<ol class="breadcrumb" id="tags_list"></ol>',
 
   initialize: function(){
     this.listenTo(this.collection, 'sync', this.render);
