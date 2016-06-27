@@ -18,7 +18,7 @@ var ItemModel = Backbone.Model.extend({
 
   toJSON: function(){
     var attributes = _.clone(this.attributes); //clone the attributes
-    attributes.items = attributes.items.pluck('_id');  // "pluck" the `_id`s of the models in the collection
+    attributes.tags = attributes.tags.pluck('_id');  // "pluck" the `_id`s of the models in the collection
     return attributes; // return the final object
   }
 });
