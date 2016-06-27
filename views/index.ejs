@@ -36,20 +36,19 @@
         </div>
         <!-- /.container -->
     </nav>
-    <h1 id="intro"><strong><%= title %></strong></h1>
-    <br>
-    <br>
-    <div class="jumbotron" style="width: 400px">
-      <div class="profile_info">
+    <div id="intro">
+      <h1 ><strong><%= title %></strong></h1>
+      <br>
+      <br>
+      <div class="jumbotron" style="width: 400px">
+        <form name="student_input" class="student_input">
+            <input name="name" type="text" style="line-height: 2em" maxlength="40" size="40" required>
+          <br>
+          <br>
+          <input type="submit" id="add_student_button" value="Add student" class="button">
+        </form>
+      <br>
       </div>
-      <form name="student_input" class="student_input">
-          <input name="name" type="text" class="name_input" maxlength="40" size="40" required>
-        <br>
-        <br>
-        <input type="submit" value="Add student" class="button">
-      </form>
-    <br>
-    </div>
     </div>
     <br>
     <h2 id="intro"><strong>Students:</strong></h2>

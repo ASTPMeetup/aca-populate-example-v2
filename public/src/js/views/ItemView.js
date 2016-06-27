@@ -1,6 +1,7 @@
 var Backbone = require('backbone');
 var _ = require('underscore');
 var TagsListView = require('./TagsListView');
+var FormView = require('./FormView');
 
 var ItemView = Backbone.View.extend({
 
@@ -9,14 +10,33 @@ var ItemView = Backbone.View.extend({
   template: _.template([
     '<div id="items_list">',
     '<h3><%= name %></h3>',
-    '<br>',
+    '<a href="#"><span id="remove">remove</span></a>',
+    '<br><br>',
     '<h5>Languages learned:</h5>',
+    '<div id="appendForm"></div>',
     '</div>'
   ].join('')),
 
-  initialize: function(){
-    this.listenTo(this.model, 'change', this.render);
+  events: {
+    'click #add_skill': 'skill_add_form',
+    'click #remove': 'removeStudent'
   },
+
+  skill_add_form: function(e){
+    e.preventDefault();
+    var $targetList = $(e.currentTarget).parent();
+    $targetList.remove();
+    this.renderFormView();
+  },
+
+  removeStudent: function() {
+    this.model.destroy();
+  },
+
+  // initialize: function(){
+  //   this.listenTo(this.model, 'change', this.render);
+  //   this.listenTo(this.model, 'sync', this.render);
+  // },
 
   render: function(){
     this.$el.append(this.template({
@@ -27,6 +47,11 @@ var ItemView = Backbone.View.extend({
     this.$el.append(tagListView.render().el);
 
     return this;
+  },
+
+  renderFormView : function(){
+    var formView = new FormView({model: this.model});
+    this.$el.append(formView.render().el);
   }
 });
 

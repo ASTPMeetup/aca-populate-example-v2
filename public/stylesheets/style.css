@@ -14,18 +14,7 @@ a {
 #tags_list {
   margin-left: 20px;
   margin-top: 10px;
-}
-
-.button {
-    background-color:  #3399ff; /* Green */
-    border: none;
-    color: white;
-    height: 35px;
-    width: 150px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
+  height: 20px;
 }
 
 input:focus {
@@ -36,7 +25,7 @@ textarea {
   width: 95%;
 }
 
-form {
+.student_input {
   padding: 5px;
   margin-left: 20px;
   margin-top: 20px;
@@ -48,11 +37,28 @@ form {
   width: 500px;
 }
 
-#intro {
-  width: 70%;
-}
+/*#intro {
+  text-align: center;
+  left: 50%
+  margin: 0;
+}*/
 
 #items_jumbotron {
   margin: 20px;
   display: inline-block;
+}
+
+#add_skill {
+  height: 16px;
+  float: right;
+}
+
+#add_skill_form {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#remove {
+  font-size: 10px;
 }
